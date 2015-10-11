@@ -1,0 +1,72 @@
+//*******************************************************************
+// Java compiler created in PHP to quickly and safely test code.
+// NOTE: please read the 'More Info' tab to the right for shortcuts.
+//*******************************************************************
+
+import java.lang.Math; // header stuff MUST go above the first class
+
+// our main class becomes a file but the main method is still found
+public class Rent
+{
+  public int Duration = 5;
+  public String Customer;
+  public int Cars_Quantity = 1;
+  public float General_price;
+  
+ 
+  public void calc()
+  { if(Cars_Quantity ==1){
+  General_price = Duration * Vehicle.Daily_price;
+  }
+   if( Cars_Quantity > 1){
+  // here will be a loop
+  } System.out.println("-----Rental information-----");
+    System.out.println("Duration, days: "+ Duration);
+    System.out.println("General price, UAH: "+ General_price);
+  } 
+ 
+  public static void main ( String[] args){
+    Rent rent = new Rent();
+    rent.calc();
+    Vehicle car = new Vehicle();
+    car.Show_vehicle_info();
+    Customer human = new Customer();
+    human.Show_customer_info();
+  }}
+// this will become its own file too (and these can be in any order)
+public class Vehicle
+{
+  public static int Daily_price = 800;
+  public String Make = "Ford";
+  public String Model = "Excursion";
+  public String Body_type = "Full-size SUV";
+  public int Production_year = 2008;
+  public float Engine_capacity = 6800;
+  public String Fuel_type = "Diesel";
+  
+  public void Show_vehicle_info(){
+    System.out.println("-----Vehicle info-----");
+  System.out.println("Daily price, UAH: " + Daily_price );
+  System.out.println("Make: "+Make);
+  System.out.println("Model: "+Model);
+  System.out.println("Body type: "+Body_type);
+  System.out.println("Production year: "+Production_year);
+  System.out.println("Engine capacity, cc: "+Engine_capacity);
+  System.out.println("Fuel type: "+Fuel_type);
+  }
+}
+
+public class Customer
+{
+public String First_name = "Oleksandr";
+public String Last_name = "Kachkovskiy";
+public String Passport_info = "AA1234567ZZ";
+
+  public void Show_customer_info(){
+  System.out.println("-----Customer info-----");  
+  System.out.println("First name: " + First_name);
+  System.out.println("Last name: "+ Last_name);
+  System.out.println("Passport info: "+Passport_info);
+  }
+
+}
